@@ -1,6 +1,7 @@
 ﻿''' <summary>
 ''' WPF ウィンドウ ListDialogWindow を COM 相互運用で使用できるように公開するための、COMクラスです。
 ''' VBA や VBScript から、参照設定、あるいは CreateObject で "Net.Surviveplus.LibrariesForMacro.ListDialog" のインスタンスを作成することが出来ます。
+''' Visual Studio マクロからインスタンスを初期化する場合は、別のスレッドを作成し SetApartmentState(Threading.ApartmentState.STA)  を指定したスレッドから初期化してください。
 ''' </summary>
 ''' <remarks>
 ''' <para>
@@ -73,7 +74,6 @@ Public Class ListDialog
     ''' </returns>
     ''' <remarks></remarks>
     Public Function ShowDialog() As Boolean
-
         Return dialog.ShowDialog()
     End Function
 
