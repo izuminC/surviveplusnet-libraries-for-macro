@@ -56,6 +56,19 @@ Partial Public Class ListDialogWindow
     End Sub
 
     ''' <summary>
+    ''' 要素の配置、描画、および操作の準備が完了したときに発生します。
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub ListDialogWindow_Loaded(ByVal sender As Object, ByVal e As System.Windows.RoutedEventArgs) Handles Me.Loaded
+
+        ' フォームを最前面に表示することを試みます。（特に Visual Studio マクロから呼び出した時は、自らアクティブにならないといけない。
+        Me.Activate()
+    End Sub
+
+
+    ''' <summary>
     ''' OK ボタンが押されたときの処理を実行します。
     ''' </summary>
     ''' <param name="sender"></param>
