@@ -1,7 +1,7 @@
 ﻿<Window x:Class="ListDialogWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="ListDialogWindow" Height="350" Width="600" WindowStartupLocation="CenterScreen" SizeToContent="Manual" Name="Window1" Topmost="True">
+    Title="ListDialogWindow" Height="350" Width="600" WindowStartupLocation="CenterScreen" SizeToContent="Manual" Name="Window1" Topmost="False">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="192*" />
