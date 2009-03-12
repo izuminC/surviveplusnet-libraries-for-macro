@@ -65,6 +65,12 @@ Partial Public Class ListDialogWindow
 
         ' フォームを最前面に表示することを試みます。（特に Visual Studio マクロから呼び出した時は、自らアクティブにならないといけない。
         Me.Activate()
+
+        ' キーボード操作のために、リストを選択しておきます。
+        Me.List.Focus()
+        If Me.List.Items.Count > 0 Then
+            Me.List.SelectedIndex = 0
+        End If
     End Sub
 
 
