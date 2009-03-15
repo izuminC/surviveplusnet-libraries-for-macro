@@ -81,6 +81,7 @@
     <Import Include="System.Windows.Navigation" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clipboard.vb" />
     <Compile Include="ListDialog.vb" />
     <Compile Include="ListDialogItem.vb" />
     <Compile Include="ListDialogWindow.xaml.vb">
