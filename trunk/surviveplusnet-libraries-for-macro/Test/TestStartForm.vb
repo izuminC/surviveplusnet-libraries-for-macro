@@ -40,4 +40,16 @@ Public Class TestStartForm
                ))
 
     End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+
+        Dim dialog As New Net.Surviveplus.LibrariesForMacro.InputDialog()
+        dialog.Title = "テストタイトル"
+        dialog.Text = "規定値"
+        'dialog.AllowEmpty = True
+        If dialog.ShowDialog() Then
+            MsgBox(dialog.Text)
+        End If
+
+    End Sub
 End Class
