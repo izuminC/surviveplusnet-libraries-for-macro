@@ -82,6 +82,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clipboard.vb" />
+    <Compile Include="InputDialog.vb" />
+    <Compile Include="InputDialogWindow.xaml.vb">
+      <DependentUpon>InputDialogWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ListDialog.vb" />
     <Compile Include="ListDialogItem.vb" />
     <Compile Include="ListDialogWindow.xaml.vb">
@@ -112,6 +116,10 @@
     <AppDesigner Include="My Project\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="InputDialogWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ListDialogWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
