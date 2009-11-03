@@ -52,4 +52,43 @@ Public Class TestStartForm
         End If
 
     End Sub
+
+    ''' <summary>
+    ''' x64 環境では、dll をビルドした時のレジストリ登録では正しく動作しません。このボタンを押して登録すると、x64 環境でも CreateObject できるようになります。
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        Try
+
+            Dim registration As New Runtime.InteropServices.RegistrationServices()
+            Dim ass = GetType(Net.Surviveplus.LibrariesForMacro.Clipboard).Assembly
+            Dim result As Boolean = registration.RegisterAssembly(ass, Runtime.InteropServices.AssemblyRegistrationFlags.None)
+
+            If result = False Then
+                Throw New NotSupportedException("Regstration.RegsterAssembly に失敗しました。")
+            End If
+
+        Catch ex As Exception
+            MsgBox("レジストリの登録に失敗しました。" + ex.ToString(), MsgBoxStyle.Exclamation)
+        End Try
+
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+
+        Try
+            Dim registration As New Runtime.InteropServices.RegistrationServices()
+            Dim ass = GetType(Net.Surviveplus.LibrariesForMacro.Clipboard).Assembly
+            Dim result As Boolean = registration.UnregisterAssembly(ass)
+
+            If result = False Then
+                Throw New NotSupportedException("Regstration.UnregisterAssembly  に失敗しました。")
+            End If
+
+        Catch ex As Exception
+            MsgBox("レジストリの登録に失敗しました。" + ex.ToString(), MsgBoxStyle.Exclamation)
+        End Try
+    End Sub
 End Class

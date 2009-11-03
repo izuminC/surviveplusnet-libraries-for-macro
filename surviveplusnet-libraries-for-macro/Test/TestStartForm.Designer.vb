@@ -24,6 +24,8 @@ Partial Class TestStartForm
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
+        Me.Button3 = New System.Windows.Forms.Button
+        Me.Button4 = New System.Windows.Forms.Button
         Me.SuspendLayout()
         '
         'Button1
@@ -44,11 +46,31 @@ Partial Class TestStartForm
         Me.Button2.Text = "&InputDialog テスト"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(12, 207)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(260, 23)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "レジストリの登録"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(12, 236)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(260, 23)
+        Me.Button4.TabIndex = 3
+        Me.Button4.Text = "レジストリの登録解除"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'TestStartForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 263)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "TestStartForm"
@@ -58,5 +80,7 @@ Partial Class TestStartForm
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 
 End Class
